@@ -9,6 +9,7 @@ module.exports = {
       },
       fontFamily: {
         Poppins: ['Poppins', 'sans-serif'],
+        Roboto: ['Roboto', 'sans-serif']
       },
     },
   },
