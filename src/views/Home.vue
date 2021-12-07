@@ -1,10 +1,11 @@
 <template>
   <div class="home bg-primary">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <HelloWorld msg="Welcome to  Vue.js App" />
   </div>
   <h1 class="font-black m-5">hellow</h1>
   <button class="bg-btnOrange">Submit</button>
+  <h1>helloworld</h1>
 </template>
 
 <script>
