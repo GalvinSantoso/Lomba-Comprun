@@ -1,6 +1,7 @@
 :root {
   --primary: #00b3c8;
   --btnColor: #f36523;
+  --card: #00b3c8;
 }
 
 * {
@@ -10,7 +11,9 @@
   font-family: 'Poppins', sans-serif;
   color: white;
 }
-
+button {
+  cursor: pointer;
+}
 /* navbar */
 
 nav {
@@ -25,6 +28,19 @@ nav {
 
 nav .home-img-nav {
   flex: 1;
+}
+
+nav .home-img-nav .img-nav {
+  width: 20%;
+  background-color: rosybrown;
+  position: relative;
+}
+
+nav .home-img-nav .img-nav img {
+  width: 100%;
+  position: absolute;
+  top: -1rem;
+  left: 0;
 }
 
 nav .nav-isi {
@@ -60,7 +76,7 @@ nav .nav-isi li:last-child a:hover {
 .home {
   background-color: var(--primary);
   width: 100%;
-  height: 100%;
+  height: 100vh;
   box-sizing: border-box;
   padding: 10px;
   display: flex;
@@ -87,8 +103,12 @@ nav .nav-isi li:last-child a:hover {
 }
 
 .home .home-kiri p {
-  font-size: 1.2rem;
-  line-height: 2rem;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+}
+
+.home .home-kiri .home-img {
+  margin: 1rem 0;
 }
 
 .home .home-kiri button {
@@ -97,7 +117,7 @@ nav .nav-isi li:last-child a:hover {
   border: none;
   font-weight: bold;
   border-radius: 10rem;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   transition: 0.5s;
 }
 
@@ -108,41 +128,50 @@ nav .nav-isi li:last-child a:hover {
 
 .home .home-kanan {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .home .home-kanan img {
-  width: 100%;
+  width: 80%;
 }
 
 /* domain */
-.domain {
+
+.domain-product {
   background-image: linear-gradient(180deg, var(--primary), white);
-  width: 100%;
   height: 100%;
+  width: 100%;
   box-sizing: border-box;
+  padding: 0 2rem;
+}
+
+.domain {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.5rem;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .domain .domain-isi {
   width: 50%;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 20px 50px;
+  padding: 1.5rem 3rem;
 }
 
 .domain .domain-isi h3 {
   font-size: 2.5rem;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 1.2rem;
 }
 
 .domain .domain-isi .domain-isi-search {
   width: 100%;
-  padding: 15px 20px;
+  padding: 1rem 2rem;
   border-radius: 10rem;
   background-color: white;
   position: relative;
@@ -161,6 +190,74 @@ nav .nav-isi li:last-child a:hover {
   right: 0;
   height: 100%;
   font-size: 1.2rem;
-  padding: 10px 40px;
+  padding: 0.8rem 3rem;
   border-radius: 100rem;
+}
+
+/* card-product */
+.card-product {
+  padding: 40px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  grid-gap: 1rem;
+}
+.card-product .card {
+  width: 100%;
+  border-radius: 1rem;
+  background-color: var(--card);
+  position: relative;
+}
+
+.card-product .card .card-atas {
+  text-align: end;
+  font-size: 2.2rem;
+  padding: 2rem;
+  font-weight: 600;
+}
+
+.card-product .card .card-bawah {
+  padding: 2rem 2rem;
+}
+
+.card-product .card .card-bawah span {
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card-product .card .card-bawah span:nth-child(2) {
+  opacity: 0.8;
+}
+
+.card-product .card .card-bawah span:nth-child(3) {
+  opacity: 0.5;
+}
+
+.card-product .card .card-bawah span:last-child {
+  opacity: 0.2;
+}
+
+.card-product .card .rotate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 1rem 0;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.card-product .card .rotate:hover {
+  color: #f36523;
+}
+
+.fas.fa-microphone,
+.fas.fa-cloud {
+  font-size: 5rem;
+  position: absolute;
+  top: -3rem;
+  left: 2rem;
 }
